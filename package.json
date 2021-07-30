@@ -1,0 +1,25 @@
+{
+  "name": "liami-ecommerce",
+  "version": "1.0.0",
+  "description": "piñatas, venta en linea, ecommerce, liami",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edgar-JC/liami-ecommerce.git"
+  },
+  "author": "Edgar Castaneda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edgar-JC/liami-ecommerce/issues"
+  },
+  "homepage": "https://github.com/Edgar-JC/liami-ecommerce#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.36.0"
+  }
+}

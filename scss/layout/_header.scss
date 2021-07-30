@@ -1,0 +1,29 @@
+.header{
+    background-color: $purple;
+
+
+
+}
+
+.barra-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    .logo {
+        flex: 0 0 25rem;
+    }
+
+}
+.main-nav{
+    display: flex;
+    gap: $spacing / 2;
+    a {
+        font-size: 2rem;
+        color: $white;
+        transition: .2s ease-in-out;
+        &:hover{
+            color: $violet;
+        }
+    }
+}
