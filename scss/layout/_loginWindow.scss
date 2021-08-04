@@ -1,0 +1,65 @@
+.login-window {
+    -webkit-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
+    font-family: $mainFont;
+    font-weight: $regularFont;
+    padding: 1rem;
+    border-radius: .5rem;
+    position: absolute;
+    top: 5rem;
+    right: -6rem;
+    width: 35rem;
+    height: 20rem;
+    background-color: $lavenderPurple;
+    display: none;
+    color: $white;
+    z-index: 1000;
+    @include mobile{
+        right: -4rem;
+    }
+    @include desktop{
+        top: 6rem;
+        width: 40rem;
+        height: 30rem;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        .login-button{
+            color: $white;
+            font-size: 2rem;
+            background-color: $purple;
+            padding: 1rem;
+            border-radius: .5rem;   
+            transition: .2s linear;
+            &:hover{
+                background-color: $white;
+                color: $purple;
+            }
+        }
+
+    }
+
+    .close-button{
+        font-size: 2.5rem;
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    .text-user {
+        font-size: 3rem;
+        font-weight: $boldFont;
+        text-align: center;
+        display: block;
+        margin: 2rem 0 $spacing 0;
+        .name-user{
+            display: block;
+        }
+    }
+
+}
+

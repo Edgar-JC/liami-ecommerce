@@ -1,0 +1,42 @@
+.fa-whatsapp {
+    color: $white;
+    transition: .2s ease-in-out;
+    
+    &:hover{
+        color: $greenWtsApp;
+    }
+}
+.fa-facebook-square{
+    color: $white;
+    transition: .2s ease-in-out;
+    &:hover{
+        color: $blueFbook;
+    }
+}
+.fa-map-marker-alt{
+    color: $white;
+    transition: .2s ease-in-out;
+
+    &:hover{
+        color: $redMaps;
+    }
+}
+.fa-instagram{
+    color: $white;
+    transition: .2s ease-in-out;
+    &:hover{
+        color: $pinkInsta;
+    }
+}
+
+.fa-envelope {
+    color: $white;
+    transition: .2s ease-in-out;
+    &:hover{
+        color: #FFB805;
+    }
+}
+
+.fa-phone-alt{
+    font-size: 1.3rem;
+}

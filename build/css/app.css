@@ -386,78 +386,425 @@ h3 {
 .container {
   margin: 0 auto;
   width: 95%;
-  max-width: 120rem;
+  max-width: 130rem;
 }
 
 .section {
   padding: 5rem 0;
 }
 
+.bar-nav .main-nav.is-active {
+  transform: translate(0, 0);
+}
+
+.body-page.hidden {
+  display: none;
+}
+
+.scale-out-tr {
+  -webkit-animation: scale-out-tr 0.3s linear both;
+  animation: scale-out-tr 0.3s linear both;
+}
+
+@keyframes scale-out-tr {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+.fa-whatsapp {
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.fa-whatsapp:hover {
+  color: #25d366;
+}
+
+.fa-facebook-square {
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.fa-facebook-square:hover {
+  color: #2C88FF;
+}
+
+.fa-map-marker-alt {
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.fa-map-marker-alt:hover {
+  color: #DE432A;
+}
+
+.fa-instagram {
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.fa-instagram:hover {
+  color: #C13584;
+}
+
+.fa-envelope {
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.fa-envelope:hover {
+  color: #FFB805;
+}
+
+.fa-phone-alt {
+  font-size: 1.3rem;
+}
+
 .info-bar {
   background-color: #000;
   color: #fff;
+  font-size: 3.5vw;
 }
-.info-bar .content-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 700;
-  padding: 0.5rem 0;
+@media (min-width: 480px) {
+  .info-bar {
+    font-size: 1.6rem;
+  }
 }
-
-.info {
+.info-bar p {
+  margin: 0;
+}
+.info-bar .info {
   display: flex;
   gap: 1rem;
 }
-.info p {
-  margin: 0;
+
+.content-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+.content-bar .help a {
   color: #fff;
 }
-.info .whats-app:hover {
-  color: #25d366;
-  transition: 0.2s ease-in-out;
+.content-bar .location {
+  display: none;
 }
-.info .facebook:hover {
-  color: #2C88FF;
-  transition: 0.2s ease-in-out;
+@media (min-width: 1024px) {
+  .content-bar .location {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
 }
-.info .map:hover {
-  color: #DE432A;
-  transition: 0.2s ease-in-out;
+
+.social-media .logos {
+  display: none;
 }
-.info .fa-whatsapp {
-  color: #25d366;
+@media (min-width: 1024px) {
+  .social-media .logos {
+    margin-right: 0.5rem;
+    display: flex;
+    gap: 1rem;
+  }
 }
-.info .fa-facebook-square {
-  color: #2C88FF;
-}
-.info .fa-map-marker-alt {
-  color: #DE432A;
+.social-media .phone-info {
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .header {
   background-color: #2e005a;
+  padding: 3rem 0;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+}
+@media (min-width: 1024px) {
+  .header {
+    padding: 2rem 0;
+  }
 }
 
 .barra-header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
   align-items: center;
-  padding: 1rem 0;
 }
-.barra-header .logo {
-  flex: 0 0 25rem;
+@media (min-width: 1024px) {
+  .barra-header {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.main-nav {
-  display: flex;
-  gap: 2.5rem;
+.logo {
+  justify-self: center;
+  width: 25rem;
+  grid-column: 3/5;
 }
-.main-nav a {
-  font-size: 2rem;
+@media (min-width: 768px) {
+  .logo {
+    flex: 0 0 22rem;
+  }
+}
+
+.hamburger-menu {
+  grid-column: 1/2;
+  justify-self: self-start;
+}
+
+.search-bar {
+  grid-column: 2/5;
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+  border-style: none;
+  outline: none;
+  transition: 0.2s ease-in-out;
+}
+@media (min-width: 480px) {
+  .search-bar {
+    grid-column: 2/6;
+  }
+}
+@media (min-width: 1024px) {
+  .search-bar {
+    width: 13vw;
+  }
+}
+.search-bar:hover {
+  background-color: #957DAD;
+}
+.search-bar::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #957DAD;
+}
+.search-bar::-moz-placeholder {
+  font-weight: 400;
+  color: #957DAD;
+}
+.search-bar::-ms-input-placeholder {
+  font-weight: 400;
+  color: #957DAD;
+}
+.search-bar:hover::-webkit-input-placeholder {
+  color: #E0BBE4;
+}
+.search-bar:hover::-moz-placeholder {
+  color: #E0BBE4;
+}
+.search-bar:hover:-moz-placeholder {
+  color: #E0BBE4;
+}
+
+.user-cart {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  justify-self: end;
+  grid-column: 6/8;
+}
+@media (min-width: 480px) {
+  .user-cart {
+    gap: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .user-cart {
+    gap: 3rem;
+  }
+}
+.user-cart a {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.user #user-icon {
+  position: relative;
+  transition: 0.2s ease-in-out;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+.user #user-icon:hover {
+  color: #F512F1;
+}
+
+.shopping-cart {
+  position: relative;
+  transition: 0.2s ease-in-out;
+}
+.shopping-cart:hover .items-cart {
+  color: #fff;
+}
+.shopping-cart:hover .fa-shopping-cart {
+  color: #F512F1;
+}
+.shopping-cart .fa-shopping-cart {
+  transition: ease-in-out 0.2s;
+}
+.shopping-cart .items-cart {
+  color: #F512F1;
+  text-align: center;
+  font-size: 1.3rem;
+  position: absolute;
+  font-weight: 700;
+  border-radius: 50%;
+  line-height: 1.5;
+  top: 0.3rem;
+  right: 0;
+  left: 0.5rem;
+  transition: 0.2s ease-in-out;
+}
+
+.bar-nav .main-nav {
+  font-weight: 700;
+  position: fixed;
+  width: 100%;
+  top: 22rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #2e005a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform ease 0.5s;
+  transform: translate(100%, 0);
+  padding: 7rem 0;
+}
+@media (min-width: 1024px) {
+  .bar-nav .main-nav {
+    padding: 3rem 0;
+    display: flex;
+    transform: translate(0, 0);
+    position: static;
+    transition: none;
+    flex-direction: row;
+    width: auto;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
+.bar-nav .main-nav a {
+  height: 15vh;
+  text-transform: uppercase;
+  font-size: 1.6rem;
   color: #fff;
   transition: 0.2s ease-in-out;
 }
-.main-nav a:hover {
+.bar-nav .main-nav a:hover {
   color: #F512F1;
+}
+@media (min-width: 1024px) {
+  .bar-nav .main-nav a {
+    height: auto;
+  }
+}
+.bar-nav .main-nav i {
+  font-size: 1.3rem;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .hamburger-menu {
+    display: none;
+  }
+}
+.hamburger-menu .line {
+  height: 0.3rem;
+  width: 2.5rem;
+  background-color: #fff;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.toggle.line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle.line2 {
+  opacity: 0;
+}
+
+.toggle.line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.login-window {
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.3);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 5rem;
+  right: -6rem;
+  width: 35rem;
+  height: 20rem;
+  background-color: #957DAD;
+  display: none;
+  color: #fff;
+  z-index: 1000;
+}
+@media (min-width: 480px) {
+  .login-window {
+    right: -4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .login-window {
+    top: 6rem;
+    width: 40rem;
+    height: 30rem;
+  }
+}
+.login-window .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.login-window .buttons .login-button {
+  color: #fff;
+  font-size: 2rem;
+  background-color: #2e005a;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: 0.2s linear;
+}
+.login-window .buttons .login-button:hover {
+  background-color: #fff;
+  color: #2e005a;
+}
+.login-window .close-button {
+  font-size: 2.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.login-window .text-user {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+  margin: 2rem 0 5rem 0;
+}
+.login-window .text-user .name-user {
+  display: block;
 }

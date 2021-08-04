@@ -1,54 +1,58 @@
 .info-bar {
     background-color: $black;
     color: $white;
+    font-size: 3.5vw;
+    @include mobile{
+        font-size: 1.6rem;
+    }
+    p{
+        margin: 0;
+    }
+    .info{
+        display: flex;
+        gap: 1rem;
+    }
     
-    .content-bar {
+}
+
+.content-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 0;
+    
+    .help {
+        a {
+            color: $white;
+        }
+    }
+
+    .location {
+        display: none;
+        @include desktop{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+
+.social-media{
+    .logos{
+        display: none;
+        @include desktop{
+        margin-right: .5rem;
+        display: flex;
+        gap: 1rem;
+        }
+    }
+    
+    .phone-info{
+        margin-left: .5rem;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        
-        font-weight: $boldFont;
-        padding: .5rem 0; 
+        gap: .5rem;
     }
 }
 
-
-.info{
-    display: flex;
-    gap: 1rem;
-    p {
-        margin: 0;
-        color: $white;
-        
-    }
-
-    .whats-app{
-        &:hover {
-            color: $greenWtsApp;
-            transition: .2s ease-in-out;
-        }
-    }
-    .facebook{
-        &:hover {
-            color: $blueFbook;
-            transition: .2s ease-in-out;
-            
-        }
-    }
-    .map {
-        &:hover {
-            color: $redMaps;
-            transition: .2s ease-in-out;   
-        }
-    }    
-
-    .fa-whatsapp {
-        color: $greenWtsApp;
-    }
-    .fa-facebook-square{
-        color: $blueFbook;
-    }
-    .fa-map-marker-alt{
-        color: $redMaps;
-    }
-}

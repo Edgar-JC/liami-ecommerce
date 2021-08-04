@@ -1,29 +1,182 @@
 .header{
     background-color: $purple;
-
-
-
+    padding: 3rem 0;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    @include desktop{
+        padding: 2rem 0;
+    }
 }
 
 .barra-header{
-    display: flex;
-    justify-content: space-between;
+    @include grid(6, 2rem);
     align-items: center;
-    padding: 1rem 0;
-    .logo {
-        flex: 0 0 25rem;
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
     }
-
 }
-.main-nav{
+
+.logo {
+    justify-self: center;
+    width: 25rem;
+    grid-column: 3/5;
+    @include tablet{
+        flex: 0 0 22rem;
+    }
+}
+
+.hamburger-menu{
+    grid-column: 1/2;
+    justify-self: self-start;
+}
+
+.search-bar{
+    grid-column: 2/5;
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+    border-style: none;
+    outline: none;
+    transition: .2s ease-in-out;
+    @include mobile{
+        grid-column: 2/6; 
+    }
+    @include desktop{
+        width: 13vw;
+    }
+    &:hover{
+        background-color: $lavenderPurple;
+
+    }
+    &::-webkit-input-placeholder {
+        font-weight: $regularFont;
+        color:$lavenderPurple;           
+    }
+    &::-moz-placeholder {
+        font-weight: $regularFont;
+        color:$lavenderPurple;           
+    }
+    &::-ms-input-placeholder {
+        font-weight: $regularFont;
+        color:$lavenderPurple;
+    }
+    &:hover::-webkit-input-placeholder { 
+        color: $thistle;
+      }
+    &:hover::-moz-placeholder {
+        color: $thistle;
+      }
+    &:hover:-moz-placeholder {
+        color: $thistle;
+      }
+}
+
+.user-cart {
     display: flex;
-    gap: $spacing / 2;
-    a {
-        font-size: 2rem;
+    align-items: center;
+    gap: 2.5rem;
+    justify-self: end;
+    grid-column: 6/8;
+    @include mobile {
+        gap: 1rem;
+    }
+    @include tablet{
+        gap: 3rem;
+    }
+    a{
         color: $white;
+        font-size: 3rem;
+    }
+}
+
+.user {
+    #user-icon{
+        position: relative;
         transition: .2s ease-in-out;
-        &:hover{
+        font-size: 3rem;
+        color: $white;
+        cursor: pointer;
+        &:hover {
             color: $violet;
         }
+    }
+}
+
+.shopping-cart {
+    position: relative;
+    transition: $transitionTime;
+    &:hover .items-cart {
+        color: $white;
+    }
+    &:hover .fa-shopping-cart{
+        color: $violet;
+    }
+    .fa-shopping-cart{
+        transition: ease-in-out .2s;
+    }
+
+    .items-cart{
+        color: $violet;
+        text-align: center;
+        font-size: 1.3rem;
+        position: absolute;
+        font-weight: $boldFont;
+        border-radius: 50%;
+        line-height: 1.5;
+        top: .3rem;
+        right: 0;
+        left: .5rem;
+        transition: $transitionTime;
+    }
+}
+
+
+
+.bar-nav{
+    .main-nav{
+        font-weight: $boldFont;
+        position: fixed;
+        width: 100%;
+        top: 22rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $purple;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        transition: transform ease .5s;
+        transform: translate(100%, 0);
+        padding: 7rem 0;
+        
+        @include desktop{
+            padding: 3rem 0;
+            display: flex;
+            transform: translate(0,0);
+            position: static;
+            transition: none;
+            flex-direction: row;
+            width: auto;
+            justify-content: center;
+            gap: $spacing;
+        }
+        a {
+            height: 15vh;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            color: $white;
+            transition: .2s ease-in-out;
+            &:hover{
+                color: $violet;
+            }
+            @include desktop{
+                height: auto;
+            }
+        }
+        i {
+            font-size: 1.3rem;
+        }    
     }
 }

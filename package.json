@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Edgar-JC/liami-ecommerce#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.0.0",
     "sass": "^1.36.0"
