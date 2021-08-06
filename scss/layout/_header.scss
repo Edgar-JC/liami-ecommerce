@@ -1,11 +1,11 @@
 .header{
     background-color: $purple;
-    padding: 3rem 0;
+    padding-bottom: 3rem;
     position: sticky;
-    z-index: 999;
+    z-index: 90;
     top: 0;
     @include desktop{
-        padding: 2rem 0;
+        padding-bottom: 2rem;
     }
 }
 
@@ -114,6 +114,8 @@
     }
     .fa-shopping-cart{
         transition: ease-in-out .2s;
+        color: $white;
+        font-size: 3rem;
     }
 
     .items-cart{
@@ -124,7 +126,7 @@
         font-weight: $boldFont;
         border-radius: 50%;
         line-height: 1.5;
-        top: .3rem;
+        top: .2rem;
         right: 0;
         left: .5rem;
         transition: $transitionTime;
@@ -133,50 +135,3 @@
 
 
 
-.bar-nav{
-    .main-nav{
-        font-weight: $boldFont;
-        position: fixed;
-        width: 100%;
-        top: 22rem;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: $purple;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        transition: transform ease .5s;
-        transform: translate(100%, 0);
-        padding: 7rem 0;
-        
-        @include desktop{
-            padding: 3rem 0;
-            display: flex;
-            transform: translate(0,0);
-            position: static;
-            transition: none;
-            flex-direction: row;
-            width: auto;
-            justify-content: center;
-            gap: $spacing;
-        }
-        a {
-            height: 15vh;
-            text-transform: uppercase;
-            font-size: 1.6rem;
-            color: $white;
-            transition: .2s ease-in-out;
-            &:hover{
-                color: $violet;
-            }
-            @include desktop{
-                height: auto;
-            }
-        }
-        i {
-            font-size: 1.3rem;
-        }    
-    }
-}

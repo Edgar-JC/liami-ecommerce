@@ -1,9 +1,14 @@
 .info-bar {
+    margin-bottom: 3rem;
     background-color: $black;
     color: $white;
     font-size: 3.5vw;
+    z-index: 999;
     @include mobile{
         font-size: 1.6rem;
+    }
+    @include desktop{
+        margin-bottom: 2rem;
     }
     p{
         margin: 0;

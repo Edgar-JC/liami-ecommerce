@@ -393,35 +393,19 @@ h3 {
   padding: 5rem 0;
 }
 
-.bar-nav .main-nav.is-active {
-  transform: translate(0, 0);
+.body.hidden {
+  overflow: hidden;
 }
 
-.body-page.hidden {
-  display: none;
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 99;
 }
 
-.scale-out-tr {
-  -webkit-animation: scale-out-tr 0.3s linear both;
-  animation: scale-out-tr 0.3s linear both;
-}
-
-@keyframes scale-out-tr {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
 .fa-whatsapp {
   color: #fff;
   transition: 0.2s ease-in-out;
@@ -467,13 +451,20 @@ h3 {
 }
 
 .info-bar {
+  margin-bottom: 3rem;
   background-color: #000;
   color: #fff;
   font-size: 3.5vw;
+  z-index: 999;
 }
 @media (min-width: 480px) {
   .info-bar {
     font-size: 1.6rem;
+  }
+}
+@media (min-width: 1024px) {
+  .info-bar {
+    margin-bottom: 2rem;
   }
 }
 .info-bar p {
@@ -523,14 +514,14 @@ h3 {
 
 .header {
   background-color: #2e005a;
-  padding: 3rem 0;
+  padding-bottom: 3rem;
   position: sticky;
-  z-index: 999;
+  z-index: 90;
   top: 0;
 }
 @media (min-width: 1024px) {
   .header {
-    padding: 2rem 0;
+    padding-bottom: 2rem;
   }
 }
 
@@ -651,6 +642,8 @@ h3 {
 }
 .shopping-cart .fa-shopping-cart {
   transition: ease-in-out 0.2s;
+  color: #fff;
+  font-size: 3rem;
 }
 .shopping-cart .items-cart {
   color: #F512F1;
@@ -660,59 +653,10 @@ h3 {
   font-weight: 700;
   border-radius: 50%;
   line-height: 1.5;
-  top: 0.3rem;
+  top: 0.2rem;
   right: 0;
   left: 0.5rem;
   transition: 0.2s ease-in-out;
-}
-
-.bar-nav .main-nav {
-  font-weight: 700;
-  position: fixed;
-  width: 100%;
-  top: 22rem;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #2e005a;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  transition: transform ease 0.5s;
-  transform: translate(100%, 0);
-  padding: 7rem 0;
-}
-@media (min-width: 1024px) {
-  .bar-nav .main-nav {
-    padding: 3rem 0;
-    display: flex;
-    transform: translate(0, 0);
-    position: static;
-    transition: none;
-    flex-direction: row;
-    width: auto;
-    justify-content: center;
-    gap: 5rem;
-  }
-}
-.bar-nav .main-nav a {
-  height: 15vh;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  color: #fff;
-  transition: 0.2s ease-in-out;
-}
-.bar-nav .main-nav a:hover {
-  color: #F512F1;
-}
-@media (min-width: 1024px) {
-  .bar-nav .main-nav a {
-    height: auto;
-  }
-}
-.bar-nav .main-nav i {
-  font-size: 1.3rem;
 }
 
 .hamburger-menu {
@@ -807,4 +751,61 @@ h3 {
 }
 .login-window .text-user .name-user {
   display: block;
+}
+
+.bar-nav .main-nav {
+  font-weight: 700;
+  position: fixed;
+  width: 70%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #2e005a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform ease 0.5s;
+  transform: translate(-100%, 0);
+  padding: 7rem 0;
+  z-index: 200;
+}
+@media (min-width: 1024px) {
+  .bar-nav .main-nav {
+    padding: 3rem 0;
+    display: flex;
+    transform: translate(0, 0);
+    position: static;
+    transition: none;
+    flex-direction: row;
+    width: auto;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
+.bar-nav .main-nav a {
+  height: 15vh;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.bar-nav .main-nav a:hover {
+  color: #F512F1;
+}
+@media (min-width: 1024px) {
+  .bar-nav .main-nav a {
+    height: auto;
+  }
+}
+.bar-nav .main-nav i {
+  font-size: 1.3rem;
+}
+
+.bar-nav .main-nav.is-active {
+  transform: translate(0, 0);
+  -webkit-box-shadow: 10px 0px 23px -12px rgba(0, 0, 0, 0.86);
+  -moz-box-shadow: 10px 0px 23px -12px rgba(0, 0, 0, 0.86);
+  box-shadow: 10px 0px 23px -12px rgba(0, 0, 0, 0.86);
 }
