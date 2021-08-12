@@ -1,7 +1,5 @@
 .login-window {
-    -webkit-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
-    box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
+    box-shadow: 0rem 0rem .4rem #444;
     font-family: $mainFont;
     font-weight: $regularFont;
     padding: 1rem;
@@ -26,8 +24,7 @@
 
     .buttons {
         display: flex;
-        justify-content: center;
-        gap: 3rem;
+        justify-content: space-evenly;
         .login-button{
             color: $white;
             font-size: 2rem;
@@ -60,6 +57,37 @@
             display: block;
         }
     }
+    &.open {
+        animation: open 0.3s ease-in-out forwards;
+    }
+    &.close {
+        animation: close 0.3s forwards;
+    }
 
+    @keyframes open {
+        0% {
+            transform: scale(0);
+            transform-origin: 100% 0%;
+            opacity: 1;
+          }
+          100% {
+            transform: scale(1);
+            transform-origin: 100% 0%;
+            opacity: 1;
+          }
+    }
+    @keyframes close {
+        100% {
+            transform: scale(0);
+            transform-origin: 100% 0%;
+            opacity: 1;
+        }
+        0% {
+            transform: scale(1);
+            transform-origin: 100% 0%;
+            opacity: 1;
+        }
+    }
 }
+
 
