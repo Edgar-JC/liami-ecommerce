@@ -7,10 +7,11 @@
     <link rel="icon" href="/build/img/iconos/pinataFavicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/build/css/app.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <title>Liami Piñatas - Venta de Piñatas</title>
 </head>
 <body class="body">
-    
+
     <header class="header">
         <div class="info-bar">
             <div class="content-bar container">
@@ -46,31 +47,26 @@
                 </div>
             </div>
         </div>
+        <!-- info bar ends -->
+        <!-- starts header / nav  -->
         <div class="barra-header container">
             <div class="logo">
                 <a href="#">
                     <img src="/build/img/iconos/logoWebLiami.png" alt="">
                 </a>
             </div>
-            
             <div class="hamburger-menu">
                 <div class="line line1"></div>
                 <div class="line line2"></div>
                 <div class="line line3"></div>
             </div>
-            <input class="search-bar" type="text" name="search" id="searchbar" placeholder="Buscar piñata . . .">
+            <div class="search-bar-container">
+                <input class="search-bar" type="text" name="search" id="searchbar" placeholder="Buscar . . .">
+                <button class="button-search" type="submit"><i class="fas fa-search"></i></button>
+            </div>
             <div class="user-cart">
                 <div class="user">
-                    <i class="fas fa-user-alt" id="user-icon">
-                        <div class="login-window">
-                            <i class="fas fa-times close-button"></i>
-                            <p class="text-user">Bienvenido! <span class="name-user"></span> </p>
-                            <div class="buttons">
-                                <a class="login-button" href="#">Iniciar Sesion</a>
-                                <a class="login-button" href="#">Registrarme</a>
-                            </div>
-                        </div>
-                    </i>
+                    <button id="user-icon"><i class="fas fa-user-alt"></i></button>
                 </div>
                 <div class="shopping-cart">
                     <i class="fas fa-shopping-cart"></i>
@@ -78,63 +74,73 @@
                 </div>
             </div>
         </div>
-        
+
     </header>
     <div class="bar-nav container">
         <nav class="main-nav">
+            <i class="fas fa-times close-nav"></i>
+            <nav class="social-media-bar">
+                <div class="phone-info">
+                    <i class="fas fa-phone-alt"></i>
+                    <p class="phone">332-191-0625</p>
+                </div>
+                <div class="social-media-logos">
+                    <i class="fab fa-facebook-square" id="face-nav"></i>
+                    <i class="fab fa-whatsapp" id="whats-nav"></i>
+                    <i class="fab fa-instagram" id="insta-nav"></i>
+                    <i class="far fa-envelope" id="mail-nav"></i>
+                </div>
+            </nav>
             <a href="#">Categorias <i class="fas fa-chevron-down"></i></a>
             <a href="#">Piñatas</a>
             <a href="#">Nosotros</a>
         </nav>
     </div>
+
     <div class="body-page" id="body-page">
-        <div class="image-slider">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae a eaque nulla? Assumenda sit officia dignissimos dolore provident, commodi maiores perspiciatis vero sunt dicta eum, dolorum repellat labore magnam amet.</p>
-            <p>Facilis, sequi quis enim rem explicabo voluptatibus nesciunt reprehenderit dolore aut laborum voluptates maxime esse, sit corporis quos nemo voluptate? Quasi neque laboriosam magnam ducimus iste. Inventore laboriosam nam soluta?</p>
-            <p>Tempore eveniet non natus. Neque ipsa provident expedita officia quibusdam nisi, eius modi assumenda dolores quisquam, ut placeat fuga ad dignissimos recusandae iure saepe ducimus quo laboriosam! Alias, incidunt sit.</p>
-            <p>Molestias doloribus saepe perferendis, dicta praesentium tempora adipisci. Repudiandae, labore tempore excepturi ex nemo porro explicabo natus ullam a eius! Obcaecati ipsa odit repellat non dignissimos. Ut veritatis vitae nihil?</p>
-            <p>Dicta maiores delectus odit debitis? Quo vitae neque, ipsa dignissimos corporis esse expedita ratione, sed quod provident porro natus nisi quis fugit vel atque. Repellendus eaque in veritatis numquam voluptates.</p>
-            <p>Non, quibusdam voluptatibus. Fugit nesciunt ex nostrum! Nisi corporis est obcaecati, natus adipisci dolorum beatae iusto debitis esse veniam repellendus possimus illum labore, voluptas voluptatibus delectus sit ex. Consequatur, error.</p>
-            <p>Corporis, veniam numquam dignissimos placeat, minima doloribus dolor doloremque laboriosam voluptate exercitationem quisquam ipsam et odio. Aspernatur expedita nihil magnam libero pariatur nostrum nulla, nobis doloribus? Nisi culpa consectetur voluptatibus.</p>
-            <p>Soluta debitis esse minima perspiciatis rerum. Earum delectus consequuntur dolor autem accusantium reprehenderit inventore soluta, unde magni hic. Molestiae minus recusandae iusto fugit ex? Ut exercitationem nisi quibusdam ex magnam!</p>
-            <p>Illum, sint eum. Sed doloribus repudiandae nihil consequuntur, ducimus neque inventore corporis officiis. Repellat praesentium nihil, distinctio, numquam illo dolore, fugit eligendi voluptatum labore similique expedita fuga consectetur impedit perferendis!</p>
-            <p>Mollitia a odio, et non minima repudiandae. Incidunt animi asperiores accusantium minus unde facilis quibusdam illum et molestiae esse, sed, suscipit repellat! Animi aperiam commodi placeat tempore, a hic sed!</p>
-            <p>Sed nisi repellendus nemo eum quasi dignissimos accusantium maiores et at. Eligendi, impedit voluptatem! Soluta expedita error id dolorem! Dignissimos delectus sint sapiente molestiae? Impedit sed placeat dolorem voluptates enim?</p>
-            <p>Minus, voluptatem. Sequi repellendus facere aliquam eveniet placeat quidem nihil repellat laudantium perferendis, ab nemo necessitatibus doloribus id aspernatur molestias, quos voluptas laboriosam. Maiores eveniet eum suscipit at, dolore consectetur!</p>
-            <p>Deleniti, voluptatibus maxime enim quisquam vitae minus quaerat natus adipisci praesentium itaque, consequuntur exercitationem odit accusantium impedit incidunt error vero nihil, iste aspernatur corporis provident alias eaque. Sint, pariatur hic.</p>
-            <p>Repellendus reiciendis sequi illo maiores similique maxime voluptatibus exercitationem distinctio inventore blanditiis temporibus corporis, quo delectus unde rem vero fugit quisquam facilis architecto iste? Totam, eaque atque? Fuga, ad fugit!</p>
-            <p>Quos ratione at ullam minus dolore sint, placeat vero doloribus facilis dicta ipsa dolores officiis labore nostrum est laudantium assumenda expedita rem dolorum molestias iure officia ipsam consectetur pariatur? Quisquam?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae a eaque nulla? Assumenda sit officia dignissimos dolore provident, commodi maiores perspiciatis vero sunt dicta eum, dolorum repellat labore magnam amet.</p>
-            <p>Facilis, sequi quis enim rem explicabo voluptatibus nesciunt reprehenderit dolore aut laborum voluptates maxime esse, sit corporis quos nemo voluptate? Quasi neque laboriosam magnam ducimus iste. Inventore laboriosam nam soluta?</p>
-            <p>Tempore eveniet non natus. Neque ipsa provident expedita officia quibusdam nisi, eius modi assumenda dolores quisquam, ut placeat fuga ad dignissimos recusandae iure saepe ducimus quo laboriosam! Alias, incidunt sit.</p>
-            <p>Molestias doloribus saepe perferendis, dicta praesentium tempora adipisci. Repudiandae, labore tempore excepturi ex nemo porro explicabo natus ullam a eius! Obcaecati ipsa odit repellat non dignissimos. Ut veritatis vitae nihil?</p>
-            <p>Dicta maiores delectus odit debitis? Quo vitae neque, ipsa dignissimos corporis esse expedita ratione, sed quod provident porro natus nisi quis fugit vel atque. Repellendus eaque in veritatis numquam voluptates.</p>
-            <p>Non, quibusdam voluptatibus. Fugit nesciunt ex nostrum! Nisi corporis est obcaecati, natus adipisci dolorum beatae iusto debitis esse veniam repellendus possimus illum labore, voluptas voluptatibus delectus sit ex. Consequatur, error.</p>
-            <p>Corporis, veniam numquam dignissimos placeat, minima doloribus dolor doloremque laboriosam voluptate exercitationem quisquam ipsam et odio. Aspernatur expedita nihil magnam libero pariatur nostrum nulla, nobis doloribus? Nisi culpa consectetur voluptatibus.</p>
-            <p>Soluta debitis esse minima perspiciatis rerum. Earum delectus consequuntur dolor autem accusantium reprehenderit inventore soluta, unde magni hic. Molestiae minus recusandae iusto fugit ex? Ut exercitationem nisi quibusdam ex magnam!</p>
-            <p>Illum, sint eum. Sed doloribus repudiandae nihil consequuntur, ducimus neque inventore corporis officiis. Repellat praesentium nihil, distinctio, numquam illo dolore, fugit eligendi voluptatum labore similique expedita fuga consectetur impedit perferendis!</p>
-            <p>Mollitia a odio, et non minima repudiandae. Incidunt animi asperiores accusantium minus unde facilis quibusdam illum et molestiae esse, sed, suscipit repellat! Animi aperiam commodi placeat tempore, a hic sed!</p>
-            <p>Sed nisi repellendus nemo eum quasi dignissimos accusantium maiores et at. Eligendi, impedit voluptatem! Soluta expedita error id dolorem! Dignissimos delectus sint sapiente molestiae? Impedit sed placeat dolorem voluptates enim?</p>
-            <p>Minus, voluptatem. Sequi repellendus facere aliquam eveniet placeat quidem nihil repellat laudantium perferendis, ab nemo necessitatibus doloribus id aspernatur molestias, quos voluptas laboriosam. Maiores eveniet eum suscipit at, dolore consectetur!</p>
-            <p>Deleniti, voluptatibus maxime enim quisquam vitae minus quaerat natus adipisci praesentium itaque, consequuntur exercitationem odit accusantium impedit incidunt error vero nihil, iste aspernatur corporis provident alias eaque. Sint, pariatur hic.</p>
-            <p>Repellendus reiciendis sequi illo maiores similique maxime voluptatibus exercitationem distinctio inventore blanditiis temporibus corporis, quo delectus unde rem vero fugit quisquam facilis architecto iste? Totam, eaque atque? Fuga, ad fugit!</p>
-            <p>Quos ratione at ullam minus dolore sint, placeat vero doloribus facilis dicta ipsa dolores officiis labore nostrum est laudantium assumenda expedita rem dolorum molestias iure officia ipsam consectetur pariatur? Quisquam?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae a eaque nulla? Assumenda sit officia dignissimos dolore provident, commodi maiores perspiciatis vero sunt dicta eum, dolorum repellat labore magnam amet.</p>
-            <p>Facilis, sequi quis enim rem explicabo voluptatibus nesciunt reprehenderit dolore aut laborum voluptates maxime esse, sit corporis quos nemo voluptate? Quasi neque laboriosam magnam ducimus iste. Inventore laboriosam nam soluta?</p>
-            <p>Tempore eveniet non natus. Neque ipsa provident expedita officia quibusdam nisi, eius modi assumenda dolores quisquam, ut placeat fuga ad dignissimos recusandae iure saepe ducimus quo laboriosam! Alias, incidunt sit.</p>
-            <p>Molestias doloribus saepe perferendis, dicta praesentium tempora adipisci. Repudiandae, labore tempore excepturi ex nemo porro explicabo natus ullam a eius! Obcaecati ipsa odit repellat non dignissimos. Ut veritatis vitae nihil?</p>
-            <p>Dicta maiores delectus odit debitis? Quo vitae neque, ipsa dignissimos corporis esse expedita ratione, sed quod provident porro natus nisi quis fugit vel atque. Repellendus eaque in veritatis numquam voluptates.</p>
-            <p>Non, quibusdam voluptatibus. Fugit nesciunt ex nostrum! Nisi corporis est obcaecati, natus adipisci dolorum beatae iusto debitis esse veniam repellendus possimus illum labore, voluptas voluptatibus delectus sit ex. Consequatur, error.</p>
-            <p>Corporis, veniam numquam dignissimos placeat, minima doloribus dolor doloremque laboriosam voluptate exercitationem quisquam ipsam et odio. Aspernatur expedita nihil magnam libero pariatur nostrum nulla, nobis doloribus? Nisi culpa consectetur voluptatibus.</p>
-            <p>Soluta debitis esse minima perspiciatis rerum. Earum delectus consequuntur dolor autem accusantium reprehenderit inventore soluta, unde magni hic. Molestiae minus recusandae iusto fugit ex? Ut exercitationem nisi quibusdam ex magnam!</p>
-            <p>Illum, sint eum. Sed doloribus repudiandae nihil consequuntur, ducimus neque inventore corporis officiis. Repellat praesentium nihil, distinctio, numquam illo dolore, fugit eligendi voluptatum labore similique expedita fuga consectetur impedit perferendis!</p>
-            <p>Mollitia a odio, et non minima repudiandae. Incidunt animi asperiores accusantium minus unde facilis quibusdam illum et molestiae esse, sed, suscipit repellat! Animi aperiam commodi placeat tempore, a hic sed!</p>
-            <p>Sed nisi repellendus nemo eum quasi dignissimos accusantium maiores et at. Eligendi, impedit voluptatem! Soluta expedita error id dolorem! Dignissimos delectus sint sapiente molestiae? Impedit sed placeat dolorem voluptates enim?</p>
-            <p>Minus, voluptatem. Sequi repellendus facere aliquam eveniet placeat quidem nihil repellat laudantium perferendis, ab nemo necessitatibus doloribus id aspernatur molestias, quos voluptas laboriosam. Maiores eveniet eum suscipit at, dolore consectetur!</p>
-            <p>Deleniti, voluptatibus maxime enim quisquam vitae minus quaerat natus adipisci praesentium itaque, consequuntur exercitationem odit accusantium impedit incidunt error vero nihil, iste aspernatur corporis provident alias eaque. Sint, pariatur hic.</p>
-            <p>Repellendus reiciendis sequi illo maiores similique maxime voluptatibus exercitationem distinctio inventore blanditiis temporibus corporis, quo delectus unde rem vero fugit quisquam facilis architecto iste? Totam, eaque atque? Fuga, ad fugit!</p>
-            <p>Quos ratione at ullam minus dolore sint, placeat vero doloribus facilis dicta ipsa dolores officiis labore nostrum est laudantium assumenda expedita rem dolorum molestias iure officia ipsam consectetur pariatur? Quisquam?</p>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" id="image1">Image 1</div>
+                <div class="swiper-slide" id="image2">Image 2</div>
+                <div class="swiper-slide" id="image3">Image 3</div>
+                <div class="swiper-slide" id="image4">Image 4</div>
+            </div>
+            <div class="swiper-button-next white"></div>
+            <div class="swiper-button-next black"></div>
+            <div class="swiper-button-prev white"></div>
+            <div class="swiper-button-prev black"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        
+        <div class="info-bonus container section">
+            <div class="info-box">
+                <div class="img-info">
+                    <img src="/build/img/iconos/icon-custom.png" alt="icon customizable">
+                </div>
+                <h3>100% Personalizadas</h3>
+                <p>Puedes enviarnos una imagen de la piñata que desees que realicemos. Asi como tambien añadir el nombre de el festejado a las piñatas.</p>
+                <a href="#">Comprar piñata personalizada</a>
+            </div>
+            <div class="info-box">
+                <div class="img-info">
+                    <img src="/build/img/iconos/shipping.png" alt="icon shipping">
+                </div>
+                <h3>Envio gratis desde $699</h3>
+                <p>Contamos con envio gratuito comprando $699 o mas en todos los articulos de nuestra tienda en linea. <span>SOLO APLICA EN LA ZMG</span></p>
+                <a href="#">Verificar si mi pedido aplica como envio gratuito</a>
+            </div>
+            <div class="info-box">
+                <div class="img-info">
+                    <img src="/build/img/iconos/secure-payment.jpg" alt="icon secure payment">
+                </div>
+                <h3>Pagos seguros con MercadoPago</h3>
+                <p>Los pagos que realizas en Liami Piñatas con tarjeta de credito y/o debito son 100% seguros ya que estan respaldados por MercagoPago.</p>
+                <a href="#">Conoce mas acerca de MercadoPago</a>
+            </div>
         </div>
     </div>
-    <script src="./build/js/bundle.js"></script>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="./build/js/bundle.min.js"></script>
 </body>
 </html>
