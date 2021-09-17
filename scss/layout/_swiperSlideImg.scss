@@ -24,8 +24,13 @@
       color: $white;
       right: 1.4rem;
     }
+    .swiper-pagination-bullet {
+      background: $purple;
+      opacity: .4;
+    }
     .swiper-pagination-bullet-active {
-      background: $white;
+      background: $purple;
+      opacity: 1;
     }
   }
 
