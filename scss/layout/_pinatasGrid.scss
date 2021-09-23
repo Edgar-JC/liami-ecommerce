@@ -1,0 +1,29 @@
+.most-popular-pinatas {
+    text-align: center;
+    h3{
+        margin: 0;
+    }
+}
+
+.grid-popular-pinatas {
+    @include grid(2,1rem);
+    
+
+}
+
+.card-pinata {
+    background-color: $white;
+    padding: 1rem;
+    
+    .btn-add-cart {
+        background-color: $white;
+        padding: 1rem;
+        color: $purple;
+        font-size: 1.5rem;
+        border-radius: 1rem;
+        border-color: $purple;
+    }
+    .name-pinata {
+        font-size: 2rem;
+    }
+}

@@ -1,3 +1,5 @@
+
+
 const d = document;
 const w = window;
 
@@ -153,6 +155,16 @@ function swiperSlideImages() {
       });
 }
 
+function slidePopularPinatas() {
+    let swiper = new Swiper(".mySwiperPinatas", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination-pinatas",
+          clickable: true,
+        },
+      });
+}
 
 
 function runFunctions() {
@@ -160,6 +172,7 @@ function runFunctions() {
     userWindow();
     appendChildNavBar();
     swiperSlideImages();
+    slidePopularPinatas();
 }
 
 window.onload = runFunctions;
